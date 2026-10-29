@@ -1,34 +1,74 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Hotel Room Booking Form</title>
 </head>
 <body>
+
     <fieldset>
-        <h1>Hotel Booking Form</h1>
-        <form action=""
-        <lebel for="name">Full Name:</lebel>
-        <input type="text" name="name" id="name"
-        placeholder="Enter your Name">
-        <br><br>
-        <lebel for="email">Email:</lebel>
-        <input type="email" name="email" id="email"
+        <h1 align="center">Hotel Room Booking Form</h1>
+        <hr>
 
-        <br><br>
-        <lebel for="tel">Phone:</lebel>
-        <input type="tel" name="tel" id="tel">
-        <br><br>
-        <lebel for="checkin">Check-in Date:</lebel>
-        <input type="date" name="checkin" id="checkin">
-        <br><br>
-        <lebel for="checkout">Check-out Date:</lebel>
-        <input type="date" name="checkout" id="checkout">
-        <br><br>
-        
+        <form action="./response.html" method="post">
 
+            <p align="center">
+                <label for="name">Full Name:</label>
+                <input type="text" name="name" id="name" required>
+            </p>
 
+            <p align="center">
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required>
+            </p>
+
+            <p align="center">
+                <label for="phone">Phone:</label>
+                <input type="tel" name="phone" id="phone" required>
+            </p>
+
+            <p align="center">
+                <label for="checkin">Check-in Date:</label>
+                <input type="date" name="checkin" id="checkin" required>
+            </p>
+
+            <p align="center">
+                <label for="checkout">Check-out Date:</label>
+                <input type="date" name="checkout" id="checkout" required>
+            </p>
+
+            <p align="center">
+                <label for="room">Room Type:</label>
+                <select name="room" id="room" required>
+                    <option value="Single Room">Single Room</option>
+                    <option value="Double Room">Double Room</option>
+                    <option value="Deluxe Room">Deluxe Room</option>
+                    <option value="Suite Room">Suite Room</option>
+                </select>
+            </p>
+
+            <p align="center">
+                <label for="guests">Number of Guests:</label>
+                <input type="number" name="guests" id="guests"
+                min="1" required>
+            </p>
+
+            <p align="center">
+                <label for="requests">Special Requests:</label>
+                <br><br>
+                <textarea name="requests" id="requests"
+                rows="5" cols="50"></textarea>
+            </p>
+
+            <p align="center">
+                <input type="submit" value="Book Now">
+                <input type="reset" value="Reset Form">
+            </p>
+
+        </form>
     </fieldset>
+
 </body>
 </html>
